@@ -1,0 +1,77 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    {{  parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('highslide/highslide.css') }}" />
+{% endblock  %}
+{% block body %}
+    <section id="page">
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Photo Gallery / <span></span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 no-gutter">
+
+                    <div id="gallery-main">
+                        <h1><span>Photo Gallery</span></h1>
+                        {% for var in response %}
+                            <h2>{{ var.title }}</h2>
+                            <ul>
+                                {% for var1 in var.images %}
+                                    <li>
+                                        <a href="{{ asset('images/uploads/gallery/' ~ var1  ) }}" class="highslide" onclick="return hs.expand(this)">
+                                            <img src="{{ asset('images/uploads/gallery/'~ var1) }}" />
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <p class="clearfix">&nbsp;</p>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('highslide/highslide-with-gallery.min.js') }}"></script>
+    <script type="text/javascript">
+        hs.graphicsDir = '{{ asset('highslide/graphics/') }}';
+        hs.align = 'center';
+        hs.transitions = ['expand', 'crossfade'];
+        hs.fadeInOut = true;
+        hs.dimmingOpacity = 0.8;
+        hs.outlineType = 'rounded-white';
+        hs.captionEval = 'this.thumb.alt';
+        hs.marginBottom = 105; // make room for the thumbstrip and the controls
+        hs.numberPosition = 'caption';
+
+        // Add the slideshow providing the controlbar and the thumbstrip
+        hs.addSlideshow({
+            //slideshowGroup: 'group1',
+            interval: 5000,
+            repeat: false,
+            useControls: true,
+            overlayOptions: {
+                className: 'text-controls',
+                position: 'bottom center',
+                relativeTo: 'viewport',
+                offsetY: -60
+            },
+            thumbstrip: {
+                position: 'bottom center',
+                mode: 'horizontal',
+                relativeTo: 'viewport'
+            }
+        });
+    </script>
+{% endblock %}

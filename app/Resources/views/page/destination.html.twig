@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <section id="page">
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                        <div class="col-lg-12">
+                            <h1>Destination / <span>{{ title }}</span></h1>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 no-gutter">
+                <div class="box">
+                <div class="col-lg-9">
+                        <img src="{{ asset('images/uploads/'~ image) }}" width="250px" height="230px" align="left" style="margin-right: 20px"/>
+                        {{ description|raw }}
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="destination right_box">
+                            <h4>Destination</h4>
+                            <ul>
+                                {{ render(controller('AppBundle:Front:DestinationList')) }}
+                            </ul>
+                        </div>
+                        <div class="adventure right_box">
+                            <h4>Adventure</h4>
+                            <ul>
+                                {{ render(controller('AppBundle:Front:AdventureList')) }}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

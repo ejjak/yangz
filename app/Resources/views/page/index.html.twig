@@ -1,5 +1,188 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    HOME
+    <section id="slider">
+        <div class="wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="{{ asset('images/slider/1.jpg') }}" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <img src="{{ asset('images/slider/2.jpg') }}" alt="">
+                                </div>
+
+                                <div class="item">
+                                    <img src="{{ asset('images/slider/3.jpg') }}" alt="">
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="intro">
+                        <div class="col-lg-5 no-gutter"><img src="{{ asset('images/intro.jpg') }}" alt="Yangzeela Tours & Travels"></div>
+                        <div class="col-lg-7 no-gutter">
+                            <h1><span class="heading">Tashi Delek,</span> Namaste!</h1>
+                            <p>
+                                <strong>With warm greetings from Yangzeela tours and travels.</strong><br>
+                                Let me introduce you to my company Yangzeela actually it is a name of my mother and it is situated in the heart of Sikkim (India).<br>
+                                We offer travels an opportunity to witness the wonderful glories, the spectacular scenery, snow peak mountains, the local culture and cuisine of North east India. Some prominent locations we cover include Darjeeling,
+                                Kalimpong and Bhutan.
+                            </p>
+                            <span class="more"><a href="#" >read more</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="about-sikkim">
+                        <h2><span class="heading">About</span> Sikkim</h2>
+                        <img src="{{ asset('images/sikkim.jpg') }}" alt="sikkim">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa. Pellentesque habitant morbi tristique senectus </p>
+                        <span class="more"><a href="#" >read more</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="destination">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3><span class="heading">Travel</span> Destination</h3>
+                    <div class="owl-carousel feat">
+                        <div class="item">
+                            <img src="{{ asset('images/destination/sikkim.jpg') }}" alt="sikkim">
+                            <div class=" grow">
+                                <strong>Sikkim</strong>
+                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa. </p>
+                                <span class="more"><a href="#">view more</a> </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/destination/darjeeling.jpg') }}" alt="Darjeeling">
+                            <div class=" grow">
+                                <strong>Darjeeling</strong>
+                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa.</p>
+                                <span class="more"><a href="#">view more</a> </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/destination/kalimpong.jpg') }}" alt="">
+
+                            <div class=" grow">
+                                <strong>Kalimpong</strong>
+                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa.  </p>
+                                <span class="more"><a href="#">view more</a> </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/destination/bhutan.jpg') }}" alt="">
+
+                            <div class=" grow">
+                                <strong>Bhutan</strong>
+                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa. </p>
+                                <span class="more"><a href="#">view more</a> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-lg-3">-->
+                <!--<div id="contact">-->
+                <!--<h3><span class="heading">Contact Details<i class="bar"></i></span></h3>-->
+                <!--&lt;!&ndash;<h3>For details contact:</h3>&ndash;&gt;-->
+                <!--+91-8927436720 (Rangpo)<br>-->
+                <!--+91-9733109665 (Namchi)<br>-->
+                <!--+91-9832560467 (Gyalshing)<br>-->
+                <!--03592-231447 <br>(SDED, HQ, Gangtok<br>-->
+                <!--<i class="glyphicon glyphicon-envelope"></i> coeitrangpo@rediffmail.com-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </section>
+    <section id="featured">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h4><span class="heading">Best Place </span>to visit in Sikkim</h4>
+                    <div class="best-place">
+                        <div class="col-lg-4 no-gutter">
+                            <img src="{{ asset('images/tours/tour1.jpg') }}" alt="">
+                        </div>
+                        <div class="col-lg-7 no-gutter" style="padding-left: 20px">
+                            <strong>Tsangu Lake</strong>
+                            <p>Approved for another four years (2016-2020) to benefit 10 million youth
+                                Pradhan Mantri Kaushal Vikas Yojana (PMKVY) is the flagship scheme of the Ministry of Skill Development & Entrepreneurship (MSDE). The objective of this Skill Certification Scheme is to enable a large number of Indian youth to take up industry-relevant skill training that will help them in securing a better livelihood. Individuals with prior learning experience or skills will also </p>
+                            <span class="more"><a href="#" >read more</a></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="best-place">
+                        <div class="col-lg-4 no-gutter">
+                            <img src="{{ asset('images/tours/tour2.jpg') }}" alt="">
+                        </div>
+                        <div class="col-lg-7 no-gutter" style="padding-left: 20px">
+                            <strong>Silk Route</strong>
+                            <p>Approved for another four years (2016-2020) to benefit 10 million youth
+                                Pradhan Mantri Kaushal Vikas Yojana (PMKVY) is the flagship scheme of the Ministry of Skill Development & Entrepreneurship (MSDE). The objective of this Skill Certification Scheme is to enable a large number of Indian youth to take up industry-relevant skill training that will help them in securing a better livelihood. Individuals with prior learning experience or skills will also </p>
+                            <span class="more"><a href="#" >read more</a></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div id="package">
+                        <h4><span class="heading">Tour</span>Packages</h4>
+                        <ul>
+                            <li><a href="#">Sikkim Tour Package</a> </li>
+                            <li><a href="#">Darjeeling Tour Packages</a> </li>
+                            <li><a href="#">Kalimpong Tour Packages</a> </li>
+                            <li><a href="#">Bhutan Tour Packages</a> </li>
+                        </ul>
+                    </div>
+                    <div id="gallery">
+                        <h4><span class="heading">Photo</span> Gallery</h4>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

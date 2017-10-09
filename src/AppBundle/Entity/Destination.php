@@ -1,8 +1,9 @@
 <?php
+
 namespace AppBundle\Entity;
-use Doctrine\Common\Collections\ArrayCollection;
+
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Destination
  *
@@ -19,17 +20,27 @@ class Destination
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+
     /**
      * @var string
-     * @Assert\NotBlank(message="Please provide Destination Name.")
-     * @ORM\Column(name="destinationName", type="string", length=255)
+     *
+     * @ORM\Column(name="title", type="string", length=255)
      */
-    private $destinationName;
+    private $title;
+
     /**
-     * @var int
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Packages", mappedBy="destination")
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
      */
-    private $packages;
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="imageurl", type="string", length=255)
+     */
+    private $imageurl;
     /**
      * Get id
      *
@@ -39,73 +50,76 @@ class Destination
     {
         return $this->id;
     }
+
     /**
-     * Set destinationName
+     * Set title
      *
-     * @param string $destinationName
+     * @param string $title
      *
      * @return Destination
      */
-    public function setDestinationName($destinationName)
+    public function setTitle($title)
     {
-        $this->destinationName = $destinationName;
+        $this->title = $title;
+
         return $this;
     }
+
     /**
-     * Get destinationName
+     * Get title
      *
      * @return string
      */
-    public function getDestinationName()
+    public function getTitle()
     {
-        return $this->destinationName;
+        return $this->title;
     }
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->packages = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
-     * Add package
+     * Set description
      *
-     * @param \AppBundle\Entity\Packages $package
+     * @param string $description
      *
      * @return Destination
      */
-    public function addPackage(\AppBundle\Entity\Packages $package)
+    public function setDescription($description)
     {
-        $this->packages[] = $package;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Remove package
+     * Get description
      *
-     * @param \AppBundle\Entity\Packages $package
+     * @return string
      */
-    public function removePackage(\AppBundle\Entity\Packages $package)
+    public function getDescription()
     {
-        $this->packages->removeElement($package);
+        return $this->description;
     }
 
     /**
-     * Get packages
+     * Set imageurl
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @param string $imageurl
+     *
+     * @return Destination
      */
-    public function getPackages()
+    public function setImageurl($imageurl)
     {
-        return $this->packages;
+        $this->imageurl = $imageurl;
+        return $this;
     }
-
-
-    public function __toString()
+    /**
+     * Get imageurl
+     *
+     * @return string
+     */
+    public function getImageurl()
     {
-        return $this->getDestinationName();
+        return $this->imageurl;
     }
 }
+
