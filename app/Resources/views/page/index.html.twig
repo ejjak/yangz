@@ -12,6 +12,8 @@
                                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#myCarousel" data-slide-to="1"></li>
                                 <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                                <li data-target="#myCarousel" data-slide-to="4"></li>
                             </ol>
 
                             <!-- Wrapper for slides -->
@@ -26,6 +28,12 @@
 
                                 <div class="item">
                                     <img src="{{ asset('images/slider/3.jpg') }}" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('images/slider/4.jpg') }}" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="{{ asset('images/slider/5.jpg') }}" alt="">
                                 </div>
                             </div>
 
@@ -66,7 +74,7 @@
                     <div class="about-sikkim">
                         <h2><span class="heading">About</span> Sikkim</h2>
                         <img src="{{ asset('images/sikkim.jpg') }}" alt="sikkim">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa. Pellentesque habitant morbi tristique senectus </p>
+                        <p>A mountain state in the Indian Himalayas and a former Himalayan Kingdom situated between Nepal ... </p>
                         <span class="more"><a href="#" >read more</a></span>
                     </div>
                 </div>
@@ -79,11 +87,20 @@
                 <div class="col-lg-12">
                     <h3><span class="heading">Travel</span> Destination</h3>
                     <div class="owl-carousel feat">
+                        {{ render(controller('AppBundle:Front:DestinationHome')) }}
                         <div class="item">
                             <img src="{{ asset('images/destination/sikkim.jpg') }}" alt="sikkim">
                             <div class=" grow">
                                 <strong>Sikkim</strong>
                                 <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa. </p>
+                                <span class="more"><a href="#">view more</a> </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/destination/darjeeling.jpg') }}" alt="Darjeeling">
+                            <div class=" grow">
+                                <strong>Darjeeling</strong>
+                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa.</p>
                                 <span class="more"><a href="#">view more</a> </span>
                             </div>
                         </div>
@@ -164,10 +181,11 @@
                     <div id="package">
                         <h4><span class="heading">Tour</span>Packages</h4>
                         <ul>
-                            <li><a href="#">Sikkim Tour Package</a> </li>
-                            <li><a href="#">Darjeeling Tour Packages</a> </li>
-                            <li><a href="#">Kalimpong Tour Packages</a> </li>
-                            <li><a href="#">Bhutan Tour Packages</a> </li>
+                            <li><a href="{{ path('packages',{'destination': 'Sikkim'}) }}">Sikkim Tour Package</a></li>
+                            <li><a href="{{ path('packages',{'destination': 'Darjeeling'}) }}">Darjeeling Tour Package</a></li>
+                            <li><a href="{{ path('packages',{'destination': 'Kalimpong'}) }}">Kalimpong Tour Package</a></li>
+                            <li><a href="{{ path('packages',{'destination': 'Nepal'}) }}">Nepal Tour Package</a></li>
+                            <li><a href="{{ path('packages',{'destination': 'Bhutan'}) }}">Bhutan Tour Package</a></li>
                         </ul>
                     </div>
                     <div id="gallery">

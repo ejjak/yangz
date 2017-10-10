@@ -49,7 +49,7 @@ class AdventureController extends Controller
             $file = $adventure->getImageurl();
             $fileName = md5(uniqid()).'.'.$file->guessExtension();
             $file->move(
-                $this->getParameter('directory'),
+                $this->getParameter('adventure'),
                 $fileName
             );
             $adventure->setImageurl($fileName);
@@ -93,7 +93,7 @@ class AdventureController extends Controller
         $fileName=$adventure->getImageurl();
         $deleteForm = $this->createDeleteForm($adventure);
         $adventure->setImageurl(
-            new File($this->getParameter('directory').'/'.$adventure->getImageurl())
+            new File($this->getParameter('adventure').'/'.$adventure->getImageurl())
         );
         $editForm = $this->createForm('AppBundle\Form\AdventureType', $adventure);
         $editForm->handleRequest($request);
@@ -102,11 +102,11 @@ class AdventureController extends Controller
             $file = $adventure->getImageurl();
             if ($file)
             {
-                $file_path='images/uploads/'.$fileName;
+                $file_path='images/adventure/'.$fileName;
                 unlink($file_path);
                 $fileName1 = md5(uniqid()).'.'.$file->guessExtension();
                 $file->move(
-                    $this->getParameter('directory'),
+                    $this->getParameter('adventure'),
                     $fileName1
                 );
                 $adventure->setImageurl($fileName1);

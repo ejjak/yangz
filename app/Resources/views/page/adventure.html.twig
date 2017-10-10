@@ -13,10 +13,10 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 no-gutter">
+                <div class="col-lg-12">
                 <div class="box">
                 <div class="col-lg-9">
-                    <img src="{{ asset('images/uploads/'~ image) }}" width="250px" height="230px" align="left" style="margin-right: 20px"/>
+                    <img src="{{ asset('images/adventure/'~ image) }}" width="250px" height="230px" align="left" style="margin-right: 20px"/>
                         {{ description|raw }}
                     </div>
                     <div class="col-lg-3">
@@ -35,11 +35,11 @@
                         <div class="right_box">
                             <h4><span class="heading">Tour</span> Packages</h4>
                             <ul>
-                                <li><a href="#">Sikkim Tour Package</a> </li>
-                                <li><a href="#">Darjeeling Tour Packages</a> </li>
-                                <li><a href="#">Nepal Tour Packages</a> </li>
-                                <li><a href="#">Bhutan Tour Packages</a> </li>
-                                <li><a href="#">Kalimpong Tour Packages</a> </li>
+                                <li><a href="{{ path('packages',{'destination': 'Sikkim'}) }}">Sikkim Tour Package</a></li>
+                                <li><a href="{{ path('packages',{'destination': 'Darjeeling'}) }}">Darjeeling Tour Package</a></li>
+                                <li><a href="{{ path('packages',{'destination': 'Kalimpong'}) }}">Kalimpong Tour Package</a></li>
+                                <li><a href="{{ path('packages',{'destination': 'Nepal'}) }}">Nepal Tour Package</a></li>
+                                <li><a href="{{ path('packages',{'destination': 'Bhutan'}) }}">Bhutan Tour Package</a></li>
                             </ul>
                         </div>
                     </div>

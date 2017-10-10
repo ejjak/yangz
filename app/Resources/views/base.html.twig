@@ -79,8 +79,8 @@
                                 {{ render(controller('AppBundle:Front:AdventureList')) }}
                             </ul>
                         </li>
-                        <li><a href="#">Photo Gallery</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{ path('photo_gallery') }}">Photo Gallery</a></li>
+                        <li><a href="{{ path('contact_form') }}">Contact</a></li>
                     </ul>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <h5>Address</h5>
                         Address - Tadong Near Rahul Tyre<br>
                         Gangtok - 737101, Sikkim-India.
@@ -102,17 +102,22 @@
                     <div class="col-lg-2">
                         <h5>Quick Links</h5>
                         <ul>
-                            <li>Home</li>
-                            <li>About us</li>
-                            <li>Contact us</li>
-                            <li>Photo Gallery</li>
+                            <li><a href="{{ path('home') }}">Home</a> </li>
+                            {{ render(controller('AppBundle:Front:PagesList')) }}
+                            <li><a href="{{ path('contact_form') }}">Contact us</a></li>
+                            <li><a href="{{ path('photo_gallery') }}">Photo Gallery</a></li>
                         </ul>
                     </div>
-
-                    <div class="col-lg-3">
+                    <div class="col-lg-2">
                         <h5>Destination</h5>
                         <ul>
                             {{ render(controller('AppBundle:Front:DestinationList')) }}
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h5>Adventure</h5>
+                        <ul>
+                            {{ render(controller('AppBundle:Front:AdventureList')) }}
                         </ul>
                     </div>
                     <div class="col-lg-3">

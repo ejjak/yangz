@@ -120,6 +120,24 @@ class FrontController extends Controller
         ));
     }
 
+    public function DestinationHomeAction(){
+        $em = $this->getDoctrine()->getManager();
+        $detail= array();
+        $view = $em->getRepository('AppBundle:Destination')->findAll();
+        foreach($view as $value)
+        {
+            if ($value instanceof Destination) {
+                $image = $value->getImageurl();
+                $description = $value->getDescription();
+                $title = $value->getTitle();
+                $id = $value->getId();
+                $detail[] = array('title' =>$title,'image'=>$image,'description'=>$description,'id' => $id);
+            }
+        }
+        return $this->render(':destination:featured-destination.html.twig', array(
+            'detail' => $detail
+        ));
+    }
     /**
      * @Route("page/{id}", name="pages")
      */

@@ -49,7 +49,7 @@ class DestinationController extends Controller
             $file = $destination->getImageurl();
             $fileName = md5(uniqid()).'.'.$file->guessExtension();
             $file->move(
-                $this->getParameter('directory'),
+                $this->getParameter('destination'),
                 $fileName
             );
             $destination->setImageurl($fileName);
@@ -93,7 +93,7 @@ class DestinationController extends Controller
         $fileName=$destination->getImageurl();
         $deleteForm = $this->createDeleteForm($destination);
         $destination->setImageurl(
-            new File($this->getParameter('directory').'/'.$destination->getImageurl())
+            new File($this->getParameter('destination').'/'.$destination->getImageurl())
         );
         $editForm = $this->createForm('AppBundle\Form\DestinationType', $destination);
         $editForm->handleRequest($request);
@@ -102,11 +102,11 @@ class DestinationController extends Controller
             $file = $destination->getImageurl();
             if ($file)
             {
-                $file_path='images/uploads/'.$fileName;
+                $file_path='images/destination/'.$fileName;
                 unlink($file_path);
                 $fileName1 = md5(uniqid()).'.'.$file->guessExtension();
                 $file->move(
-                    $this->getParameter('directory'),
+                    $this->getParameter('destination'),
                     $fileName1
                 );
                 $destination->setImageurl($fileName1);

@@ -27,7 +27,7 @@
                                     <tr>
                                         <td><a href="{{ path('destination_show', { 'id': destination.id }) }}">{{ destination.id }}</a></td>
                                         <td>{{ destination.title }}</td>
-                                        <td>{{ destination.description|raw }}</td>
+                                        <td>{{ (destination.description|length > 525 ? destination.description|slice(0, 525) ~ '&hellip;' : destination.description)|raw  }}</td>
                                         <td width="15%">
                                             <table>
                                                 <tr>

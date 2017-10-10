@@ -8,6 +8,8 @@ imports:
 parameters:
     locale: en
     directory: '%kernel.root_dir%/../web/images/uploads'
+    destination: '%kernel.root_dir%/../web/images/destination'
+    adventure: '%kernel.root_dir%/../web/images/adventure'
 
 framework:
     #esi: ~
