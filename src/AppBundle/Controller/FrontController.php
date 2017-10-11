@@ -116,7 +116,7 @@ class FrontController extends Controller
                 $detail[] = array('title' =>$title,'id' => $id);
             }
         }
-        return $this->render(':destination:links.html.twig', array(
+        return $this->render(':page:links.html.twig', array(
             'detail' => $detail
         ));
     }
@@ -135,7 +135,7 @@ class FrontController extends Controller
                 $detail[] = array('title' =>$title,'image'=>$image,'description'=>$description,'id' => $id);
             }
         }
-        return $this->render(':destination:featured-destination.html.twig', array(
+        return $this->render(':page:featured-destination.html.twig', array(
             'detail' => $detail
         ));
     }
