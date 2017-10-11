@@ -10,4 +10,11 @@ namespace AppBundle\Repository;
  */
 class PagesRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findHomeAboutUsAction(){
+        $em = $this->getEntityManager();
+        $about = $em->createQuery('SELECT a FROM AppBundle:Pages a WHERE a.id = 1')
+        ->getResult()
+        ;
+        return $about;
+    }
 }

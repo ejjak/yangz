@@ -158,6 +158,24 @@ class FrontController extends Controller
 
     }
 
+    /**
+     * @Route("home-about", name="home_about")
+     */
+    public function HomeAboutAction(){
+        $em = $this->getDoctrine()->getManager();
+        $detail = $em->getRepository('AppBundle:Pages')->findHomeAboutUsAction();
+        $about ='';
+        foreach($detail as $val){
+           if($val instanceof Pages){
+               $about = $val->getDescription();
+           }
+        }
+//        dump($about);die;
+        return $this->render(':pages:hom-about.html.twig', array(
+            'about' => $about
+        ));
+    }
+
     public function PagesListAction(){
         $em = $this->getDoctrine()->getManager();
         $detail= array();
@@ -176,7 +194,7 @@ class FrontController extends Controller
     }
 
     /**
-     * @Route("/packages/{destination}", name="packages")
+     * @Route("/tour-package/{destination}", name="packages")
      * @Method("GET")
      */
     public function PackagesAction($destination)

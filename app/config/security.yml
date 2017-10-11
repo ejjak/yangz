@@ -28,3 +28,10 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, role: ROLE_USER }
+        - { path: ^/adventure, role: ROLE_USER }
+        - { path: ^/destination, role: ROLE_USER }
+        - { path: ^/gallery, role: ROLE_USER }
+        - { path: ^/images, role: ROLE_USER }
+        - { path: ^/location, role: ROLE_USER }
+        - { path: ^/packages, role: ROLE_USER }
+        - { path: ^/pages, role: ROLE_USER }

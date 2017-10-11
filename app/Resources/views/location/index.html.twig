@@ -27,25 +27,25 @@
                                     <tr>
                                         <td><a href="{{ path('location_show', { 'id': location.id }) }}">{{ location.id }}</a></td>
                                         <td>{{ location.destinationName }}</td>
-                                        <td width="15%">
-                                            <table>
-                                                <tr>
-                                                    <td width="80px">
-                                                        <a href="{{ path('location_show', { 'id': location.id }) }}" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> show</a>
-                                                    </td>
-                                                    <td width="80px">
-                                                        <a href="{{ path('location_edit', { 'id': location.id }) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> edit </a>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
+                                        {#<td width="15%">#}
+                                            {#<table>#}
+                                                {#<tr>#}
+                                                    {#<td width="80px">#}
+                                                        {#<a href="{{ path('location_show', { 'id': location.id }) }}" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> show</a>#}
+                                                    {#</td>#}
+                                                    {#<td width="80px">#}
+                                                        {#<a href="{{ path('location_edit', { 'id': location.id }) }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> edit </a>#}
+                                                    {#</td>#}
+                                                {#</tr>#}
+                                            {#</table>#}
+                                        {#</td>#}
                                     </tr>
                                 {% endfor %}
                                 </tbody>
                             </table>
                             <br>
                         </div>
-                        <a href="{{ path('location_new') }}" class="btn btn-sm btn-default"><i class="fa fa-pencil"></i>Create New Location</a>
+                        {#<a href="{{ path('location_new') }}" class="btn btn-sm btn-default"><i class="fa fa-pencil"></i>Create New Location</a>#}
                     </div>
                 </div>
             </div>

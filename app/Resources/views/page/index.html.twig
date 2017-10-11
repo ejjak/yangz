@@ -60,13 +60,8 @@
                         <div class="col-lg-5 no-gutter"><img src="{{ asset('images/intro.jpg') }}" alt="Yangzeela Tours & Travels"></div>
                         <div class="col-lg-7 no-gutter">
                             <h1><span class="heading">Tashi Delek,</span> Namaste!</h1>
-                            <p>
-                                <strong>With warm greetings from Yangzeela tours and travels.</strong><br>
-                                Let me introduce you to my company Yangzeela actually it is a name of my mother and it is situated in the heart of Sikkim (India).<br>
-                                We offer travels an opportunity to witness the wonderful glories, the spectacular scenery, snow peak mountains, the local culture and cuisine of North east India. Some prominent locations we cover include Darjeeling,
-                                Kalimpong and Bhutan.
-                            </p>
-                            <span class="more"><a href="#" >read more</a></span>
+                            {{ render(controller('AppBundle:Front:HomeAbout')) }}
+                            <span class="more"><a href="{{ path('pages',{'id':1}) }}" >read more</a></span>
                         </div>
                     </div>
                 </div>
@@ -88,61 +83,8 @@
                     <h3><span class="heading">Travel</span> Destination</h3>
                     <div class="owl-carousel feat">
                         {{ render(controller('AppBundle:Front:DestinationHome')) }}
-                        <div class="item">
-                            <img src="{{ asset('images/destination/sikkim.jpg') }}" alt="sikkim">
-                            <div class=" grow">
-                                <strong>Sikkim</strong>
-                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa. </p>
-                                <span class="more"><a href="#">view more</a> </span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('images/destination/darjeeling.jpg') }}" alt="Darjeeling">
-                            <div class=" grow">
-                                <strong>Darjeeling</strong>
-                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa.</p>
-                                <span class="more"><a href="#">view more</a> </span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('images/destination/darjeeling.jpg') }}" alt="Darjeeling">
-                            <div class=" grow">
-                                <strong>Darjeeling</strong>
-                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa.</p>
-                                <span class="more"><a href="#">view more</a> </span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('images/destination/kalimpong.jpg') }}" alt="">
-
-                            <div class=" grow">
-                                <strong>Kalimpong</strong>
-                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa.  </p>
-                                <span class="more"><a href="#">view more</a> </span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('images/destination/bhutan.jpg') }}" alt="">
-
-                            <div class=" grow">
-                                <strong>Bhutan</strong>
-                                <p>Dummy Text dolor sit amet, consectetur adipiscing elit. Donec in magna a nibh interdum tincidunt non a massa. </p>
-                                <span class="more"><a href="#">view more</a> </span>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <!--<div class="col-lg-3">-->
-                <!--<div id="contact">-->
-                <!--<h3><span class="heading">Contact Details<i class="bar"></i></span></h3>-->
-                <!--&lt;!&ndash;<h3>For details contact:</h3>&ndash;&gt;-->
-                <!--+91-8927436720 (Rangpo)<br>-->
-                <!--+91-9733109665 (Namchi)<br>-->
-                <!--+91-9832560467 (Gyalshing)<br>-->
-                <!--03592-231447 <br>(SDED, HQ, Gangtok<br>-->
-                <!--<i class="glyphicon glyphicon-envelope"></i> coeitrangpo@rediffmail.com-->
-                <!--</div>-->
-                <!--</div>-->
             </div>
         </div>
     </section>
