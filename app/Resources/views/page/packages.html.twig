@@ -1,5 +1,5 @@
 {% extends '::base.html.twig' %}
-
+{% block title %}Packages - Yangzeela Tours & Travels Sikkim{% endblock %}
 {% block body %}
     <section id="page">
         <div class="page-header">
@@ -22,8 +22,8 @@
                            <div class="col-lg-4">
                                <div class="packages">
                                <img src="{{ asset('images/uploads/'~ val.image) }}" align="left" height="160px" width="100%"/><br>
-
-                               <a href="{{ path('tour_packages',{'id':val.id}) }}">{{ val.title }}</a>
+                                <p>{{ val.title }}</p>
+                                   <span><a href="{{ path('tour_packages',{'id':val.id}) }}">view</a></span>
                                </div>
                            </div>
                                {% endif %}
