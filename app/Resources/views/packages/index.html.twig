@@ -18,6 +18,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Title</th>
+                                    <th>location</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -26,6 +27,7 @@
                                     <tr>
                                         <td><a href="{{ path('packages_show', { 'id': package.id }) }}">{{ package.id }}</a></td>
                                         <td>{{ package.title }}</td>
+                                        <td>{{ package.location }}</td>
                                         <td width="15%">
                                             <table>
                                                 <tr>
