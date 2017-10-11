@@ -44,7 +44,7 @@ class FrontController extends Controller
 //    }
 
     /**
-     * @Route("adventure/page/{id}", name="adventure")
+     * @Route("page/adventure/{id}", name="adventure")
      */
     public function AdventureAction($id)
     {
@@ -83,7 +83,7 @@ class FrontController extends Controller
     }
 
     /**
-     * @Route("destination/page/{id}", name="destination")
+     * @Route("page/destination/{id}", name="destination")
      */
     public function DestinationAction($id)
     {
