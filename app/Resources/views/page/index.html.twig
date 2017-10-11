@@ -70,7 +70,7 @@
                         <h2><span class="heading">About</span> Sikkim</h2>
                         <img src="{{ asset('images/sikkim.jpg') }}" alt="sikkim">
                         <p>A mountain state in the Indian Himalayas and a former Himalayan Kingdom situated between Nepal ... </p>
-                        <span class="more"><a href="#" >read more</a></span>
+                        <span class="more"><a href="{{ path('destination',{'id':1}) }}" >read more</a></span>
                     </div>
                 </div>
             </div>
@@ -99,9 +99,9 @@
                         </div>
                         <div class="col-lg-7 no-gutter" style="padding-left: 20px">
                             <strong>Tsangu Lake</strong>
-                            <p>Approved for another four years (2016-2020) to benefit 10 million youth
-                                Pradhan Mantri Kaushal Vikas Yojana (PMKVY) is the flagship scheme of the Ministry of Skill Development & Entrepreneurship (MSDE). The objective of this Skill Certification Scheme is to enable a large number of Indian youth to take up industry-relevant skill training that will help them in securing a better livelihood. Individuals with prior learning experience or skills will also </p>
-                            <span class="more"><a href="#" >read more</a></span>
+                            <p>
+                                Tsomgo Lake, also known as Tsongmo Lake or Changu Lake, is a glacial lake in the East Sikkim district of the Indian state of Sikkim, some 40 kilometres (25 mi) from the capital Gangtok. Located at an elevation of 3,753 m (12,313 ft), the lake remains frozen during the winter season. The lake surface reflects different colours with change of seasons and is held in great reverence by the local Sikkimese people. Buddhist monks prognosticated after studying the changing colours of the lake.
+                            </p>
                         </div>
 
                     </div>
@@ -112,9 +112,7 @@
                         </div>
                         <div class="col-lg-7 no-gutter" style="padding-left: 20px">
                             <strong>Silk Route</strong>
-                            <p>Approved for another four years (2016-2020) to benefit 10 million youth
-                                Pradhan Mantri Kaushal Vikas Yojana (PMKVY) is the flagship scheme of the Ministry of Skill Development & Entrepreneurship (MSDE). The objective of this Skill Certification Scheme is to enable a large number of Indian youth to take up industry-relevant skill training that will help them in securing a better livelihood. Individuals with prior learning experience or skills will also </p>
-                            <span class="more"><a href="#" >read more</a></span>
+                            <p>The Old Silk Route or Silk Road which passes through East Sikkim is a part of the ancient network of trade routes which connected China to India. This route passed through Lhasa and Nathu La and Jelep La Pass and finally reached the port of Tamralipta (present Tamluk in West Bengal) from where it took to the sea and reached far east. This Ancient Silk Route is expected to have been discovered by traders as early as First Century AD.</p>
                         </div>
 
                     </div>
@@ -132,14 +130,11 @@
                     </div>
                     <div id="gallery">
                         <h4><span class="heading">Photo</span> Gallery</h4>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                        </ul>
+                        <div>
+                            <img src="{{ asset('images/destination/sikkim.jpg') }}" class="img-responsive">
+                            <span class="more"><i class="fa fa-search"></i> <a href="{{ path('photo_gallery') }}" >veiw gallery</a></span>
+                        </div>
+
                     </div>
                 </div>
             </div>

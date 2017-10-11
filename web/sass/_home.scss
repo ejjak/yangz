@@ -99,6 +99,13 @@ section{
 
 #gallery{
   margin-top: 30px;
+  .more{
+    display: block;
+    background:#111;
+    padding:5px 10px;
+    color: #FFF;
+  }
+  a{ color: #FFF; text-transform:uppercase;}
   ul li{
     width: 70px;
     height: 70px;

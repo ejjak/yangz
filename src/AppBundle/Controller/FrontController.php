@@ -7,6 +7,7 @@
  */
 namespace AppBundle\Controller;
 use AppBundle\Entity\Adventure;
+use AppBundle\Entity\ContactDetails;
 use AppBundle\Entity\Destination;
 use AppBundle\Entity\Gallery;
 use AppBundle\Entity\Images;
@@ -266,6 +267,63 @@ class FrontController extends Controller
 //      dump($response);die;
         return $this->render('page/gallery.html.twig', array(
             'response'      => $response
+        ));
+    }
+
+    /**
+     * @Route("contact-address", name="contact_address")
+     */
+    public function ContactAddressAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $detail = $em->getRepository('AppBundle:ContactDetails')->findContactAction();
+        $address ='';
+        foreach($detail as $val){
+            if($val instanceof ContactDetails){
+                $address = $val->getAddress();
+            }
+        }
+//        dump($about);die;
+        return $this->render(':contactdetails:address.html.twig', array(
+            'address' => $address
+        ));
+    }
+
+    /**
+     * @Route("contact-phone", name="contact_phone")
+     */
+    public function ContactPhoneAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $detail = $em->getRepository('AppBundle:ContactDetails')->findContactAction();
+        $phone ='';
+        foreach($detail as $val){
+            if($val instanceof ContactDetails){
+                $phone = $val->getPhone();
+            }
+        }
+//        dump($about);die;
+        return $this->render(':contactdetails:phone.html.twig', array(
+            'phone' => $phone
+        ));
+    }
+
+    /**
+     * @Route("contact-email", name="contact_email")
+     */
+    public function ContactEmailAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $detail = $em->getRepository('AppBundle:ContactDetails')->findContactAction();
+        $email ='';
+        foreach($detail as $val){
+            if($val instanceof ContactDetails){
+                $email = $val->getEmail();
+            }
+        }
+//        dump($about);die;
+        return $this->render(':contactdetails:email.html.twig', array(
+            'email' => $email
         ));
     }
 }

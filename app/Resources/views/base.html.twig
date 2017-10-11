@@ -4,11 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name='description' content='We offer the wonderful opportunity to travel and witness the spectacular places' />
-        <meta name='keywords' content='Yangzeela tours and travels Sikkim,Yangzeela Sikkim,Sikkim,India,Gangtok,trekking, touring, tour operators,sikkim tour and travels,travel in sikkim, tour in sikkim,
-Adventure in Sikkim, Paragliding, River Rafting, cultural cuisine,
-Mountain Expedition,Sikkim - Honeymoon Tour,Sikkim - Darjeeling Tour,Sikkim Alpine Tour,Gurudogmar Tour,Zuluk Silk Route Tour,Sikkim, Bhutan Tour,
-Village & Homestay Tour,One Day Private Tour,Trekking & Hiking,Bird Watching,Mountain Biking,Botanical Tour,Ecotourism in Sikkim' />
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
         <meta http-equiv="content-Type" content="text/html; charset=windows-1252">
         <meta http-equiv="charset" content="ISO-8859-1">
         <meta http-equiv="content-language" content="English">
@@ -17,13 +14,12 @@ Village & Homestay Tour,One Day Private Tour,Trekking & Hiking,Bird Watching,Mou
         <meta name="robots" content="index,follow">
         <meta name="revisit-after" content="1 weeks">
         <title>{% block title %}Yangzeela Tours & Travels{% endblock %}</title>
-        {% block stylesheets %}
+        {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-        {% endblock %}
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,400i,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
@@ -101,8 +97,9 @@ Village & Homestay Tour,One Day Private Tour,Trekking & Hiking,Bird Watching,Mou
                 <div class="row">
                     <div class="col-lg-3">
                         <h5>Address</h5>
-                        Address - Tadong Near Rahul Tyre<br>
-                        Gangtok - 737101, Sikkim-India.
+                        {{ render(controller('AppBundle:Front:ContactAddress')) }}
+                        {#Address - Tadong Near Rahul Tyre<br>#}
+                        {#Gangtok - 737101, Sikkim-India.#}
                     </div>
                     <div class="col-lg-2">
                         <h5>Quick Links</h5>
@@ -127,8 +124,8 @@ Village & Homestay Tour,One Day Private Tour,Trekking & Hiking,Bird Watching,Mou
                     </div>
                     <div class="col-lg-3">
                         <h5>Contact</h5>
-                        Contact - 9832617653/ 9832617653<br>
-                        Email - dawaujanu@yahoo.com
+                        <i class="fa fa-phone"></i> {{ render(controller('AppBundle:Front:ContactPhone')) }}<br>
+                        <i class="fa fa-envelope"></i> {{ render(controller('AppBundle:Front:ContactEmail')) }}
 
                     </div>
                 </div>
